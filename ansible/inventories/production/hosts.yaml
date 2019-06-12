@@ -1,12 +1,16 @@
 all:
   hosts:
-    - 10.0.0.1
+    bridge:
+    workers:
   children:
+    bridge:
+      hosts:
+        10.0.0.1:
     workers:
       hosts:
-        - 10.0.0.2
-        - 10.0.0.3
-        - 10.0.0.4
+        10.0.0.2:
+        10.0.0.3:
+        10.0.0.4:
 
 
 
