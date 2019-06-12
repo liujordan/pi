@@ -15,15 +15,14 @@
 
 - name: Add Docker repo
   yum_repository:
-    name: stable
-    baseurl: https://download.docker.com/linux/centos/docker-ce.repo
-    description: "Docker Stable"
-    enabled: yes
+    name: docker-ce.repo
+    baseurl: https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/22/Everything/armhfp/os/
+    description: "Docker"
   become: yes
 
 - name: Install Docker
   package:
-    name: docker-ce
+    name: docker
     state: latest
   become: yes
 
@@ -34,9 +33,9 @@
     enabled: yes
   become: yes
 
-- name: Add user vagrant to docker group
+- name: Add user root to docker group
   user:
-    name: vagrant
+    name: root
     groups: docker
     append: yes
   become: yes
