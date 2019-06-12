@@ -1,3 +1,2 @@
 ---
 # defaults file for base_ssh
-host_key_checking: False

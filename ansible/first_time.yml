@@ -2,4 +2,5 @@
 - hosts: workers
   roles:
     - ./roles/base_ssh
+    - ./roles/docker
   

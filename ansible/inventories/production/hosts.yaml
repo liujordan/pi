@@ -3,6 +3,9 @@ all:
     bridge:
       hosts:
         10.0.0.1:
+    masters:
+      hosts:
+        10.0.0.1:
     workers:
       hosts:
         10.0.0.2:
