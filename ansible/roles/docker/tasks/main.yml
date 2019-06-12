@@ -15,10 +15,10 @@
 
 - name: Add Docker repo
   yum_repository:
-    name: docker-ce.repo
+    name: fedora.repo
     baseurl: https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/22/Everything/armhfp/os/
     description: "Docker"
-    gpgkey: https://getfedora.org/static/8E1431D5.txt
+    gpgkey: https://getfedora.org/static/fedora.gpg
   become: yes
 
 - name: Install Docker
