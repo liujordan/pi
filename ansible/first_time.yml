@@ -1,6 +1,13 @@
 ---
-- hosts: workers
+- name: First time setup
+  hosts:
+    - workers
   roles:
     - base_ssh
+- name: Install Docker
+  hosts:
+    - workers
+    - masters
+  roles:
     - docker
   
