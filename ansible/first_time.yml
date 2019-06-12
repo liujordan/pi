@@ -10,4 +10,5 @@
     - masters
   roles:
     - docker
+  gather_facts: False
   
