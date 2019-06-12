@@ -15,8 +15,8 @@
 
 - name: Add Docker repo
   yum_repository:
-    name: fedora.repo
-    baseurl: https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/22/Everything/armhfp/os/
+    name: fedora
+    baseurl: https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/30/Everything/armhfp/os/
     description: "Docker"
     gpgkey: https://getfedora.org/static/fedora.gpg
   become: yes
@@ -33,6 +33,10 @@
     state: started
     enabled: yes
   become: yes
+
+- name: Add Docker group
+  group:
+    name: docker
 
 - name: Add user root to docker group
   user:
