@@ -15,6 +15,7 @@
 
 - name: Add Docker repo
   yum_repository:
+    name: stable
     baseurl: https://download.docker.com/linux/centos/docker-ce.repo
     enabled: yes
   become: yes
