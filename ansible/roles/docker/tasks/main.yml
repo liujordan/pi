@@ -18,6 +18,7 @@
     name: docker-ce.repo
     baseurl: https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/22/Everything/armhfp/os/
     description: "Docker"
+    gpgkey: https://getfedora.org/static/8E1431D5.txt
   become: yes
 
 - name: Install Docker
